@@ -49,14 +49,16 @@ const getRandomStrength = () => {
 
 const view = (playerObj)=>{
     let player = document.createElement('div');
-    player.classList.add('player');
     let image = document.createElement('img');
+    let name = document.createElement('div');
+    let strength = document.createElement('div');
+    player.classList.add('player');
     image.setAttribute('src', playerObj.image);
     image.setAttribute('alt',"")
-    let name = document.createElement('div');
+    
     name.className="name";
     name.textContent = playerObj.name;
-    let strength = document.createElement('div');
+    
     strength.textContent = playerObj.strength;
     strength.className = 'strength';
     player.append(image, name, strength);
